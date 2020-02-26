@@ -21,10 +21,8 @@ build()
 }
 
 
-# install()
-# {
-#     cd ${BUILDDIR}
-#     make install
-#     #cd ${PKGDIR}
-#     #install_ups
-# }
+install()
+{
+    cd ${BUILDDIR}
+    make install -e DESTDIR=${PREFIX}
+}
