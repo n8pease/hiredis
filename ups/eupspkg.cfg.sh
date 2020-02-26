@@ -10,7 +10,7 @@ config()
     mkdir -p ${BUILDDIR}
     cd ${BUILDDIR}
     echo $PWD
-    cmake -DCMAKE_BUILD_TYPE=Release ..
+    cmake3 -DCMAKE_BUILD_TYPE=Release ..
 }
 
 
