@@ -4,26 +4,14 @@ PKGDIR=$PWD
 BUILDDIR=$PWD/build
 
 
-config()
-{
-    rm -rf ${BUILDDIR}
-    mkdir -p ${BUILDDIR}
-    cd ${BUILDDIR}
-    echo $PWD
-    cmake3 ..
-}
-
-
 build()
 {
-    cd ${BUILDDIR}
-    default_build
+    cmake3
 }
 
 
 install()
 {
-    install_ups
-    cd ${BUILDDIR}
     make install -e DESTDIR=${PREFIX}
+    install_ups
 }
