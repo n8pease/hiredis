@@ -23,6 +23,7 @@ build()
 
 install()
 {
+    install_ups
     cd ${BUILDDIR}
     make install -e DESTDIR=${PREFIX}
 }
